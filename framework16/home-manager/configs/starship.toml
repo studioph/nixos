@@ -1,0 +1,83 @@
+add_newline = false
+scan_timeout = 100
+
+format = """($aws$gcloud )(using:\n$docker_context$package$nodejs$python$java$dotnet$rust$cmake\n)$username@$hostname:$directory$git_branch$git_status$git_commit$character"""
+
+[username]
+show_always = true
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+
+[directory]
+read_only = " 󰌾"
+truncation_symbol = '../'
+
+[git_branch]
+symbol = " "
+
+[git_status]
+staged = '[++\($count\)](green)'
+style = 'bold bright-red'
+
+[git_commit]
+tag_disabled = false
+only_detached = false
+style = 'bold bright-purple'
+
+[docker_context]
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile", 'dockerfile']
+symbol = " "
+style = 'bold bright-cyan'
+format = '[$symbol$context]($style) '
+
+[package]
+symbol = "󰏗 "
+display_private = true
+format = '[\($symbol$version\)]($style) '
+
+[nodejs]
+format = '[$symbol($version )]($style)'
+symbol = '⬢ '
+
+[python]
+symbol = " "
+python_binary = "python3"
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)'
+
+[java]
+style = 'bold red dimmed'
+symbol = ' '
+format = '[${symbol}(${version} )]($style)'
+
+[dotnet]
+format = '[$symbol($version)  ($tfm )]($style)'
+style = 'bold bright-blue'
+
+[rust]
+symbol = ' '
+format = '[$symbol($version )]($style)'
+
+[cmake]
+symbol = '󰔷 '
+style = 'bold bright-black'
+format = '[$symbol($version )]($style)'
+
+[aws]
+symbol = " "
+format = 'in [$symbol(\($region\))]($style) '
+style = 'bold bright-yellow'
+
+[gcloud]
+symbol = ' '
+format = 'in [$symbol(\($project\))]($style)'
+style = 'bold bright-green'
+
+[jobs]
+threshold = 0
+format = '[\[$symbol$number\]]($style) '
+symbol = ''
+style = 'bright-white'
+

@@ -1,0 +1,195 @@
+{
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    },
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": false,
+    "editor.insertSpaces": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": true
+  },
+  "[helm]": {
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[yaml]": {
+    "editor.autoIndent": "keep",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.quickSuggestions": {
+      "comments": false,
+      "other": true,
+      "strings": true
+    },
+    "editor.tabSize": 2,
+    "gitlens.codeLens.scopes": [
+      "document"
+    ]
+  },
+  "aws.codeWhisperer.includeSuggestionsWithCodeReferences": false,
+  "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
+  "aws.experiments": {
+    "CodeWhisperer": false
+  },
+  "aws.telemetry": false,
+  "base16.generator.activatedThemes": [
+    "base16-default-dark",
+    "base16-materia-dark",
+    "base16-material-dark"
+  ],
+  "editor.largeFileOptimizations": false,
+  "editor.renderWhitespace": "all",
+  "explorer.autoReveal": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "files.associations": {
+    "*.unit": "systemd-unit-file"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.coverage": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.pytest_cache": true,
+    "**/.settings": true,
+    "**/__pycache__": true
+  },
+  "git.autoRepositoryDetection": "openEditors",
+  "git.autofetch": true,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "githubPullRequests.telemetry.enabled": false,
+  "go.formatTool": "goformat",
+  "jupyter.experiments.enabled": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "material-icon-theme.showWelcomeMessage": false,
+  "python.experiments.enabled": false,
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "python.linting.enabled": true,
+  "python.terminal.activateEnvironment": false,
+  "python.testing.pytestArgs": [
+    "--no-cov"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.venvFolders": [
+    "/home/paul/.cache/pypoetry/virtualenvs"
+  ],
+  "pythonTestExplorer.testFramework": "pytest",
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "update.mode": "none",
+  "update.showReleaseNotes": false,
+  "vs-kubernetes": {
+    "checkForMinikubeUpgrade": false,
+    "vscode-kubernetes.helm-path.linux": "/usr/sbin/helm",
+    "vscode-kubernetes.kubectl-path.linux": "/usr/bin/kubectl",
+    "vscode-kubernetes.minikube-path.linux": "/home/paul/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+  },
+  "vscode-kubernetes.helm-path.linux": "/usr/sbin/helm",
+  "vscode-kubernetes.kubectl-path.linux": "/usr/bin/kubectl",
+  "workbench.colorTheme": "Material Theme",
+  "workbench.enableExperiments": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "python.linting.pylintEnabled": true,
+  "material-icon-theme.files.associations": {
+    "*.env": "tune"
+  },
+  // "caddyfile.executable": "/home/paul/.local/bin/caddy",
+  "[caddyfile]": {
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "docker.host": "unix:///run/user/1000/podman/podman.sock",
+  "docker.dockerPath": "/run/current-system/sw/bin/podman",
+  "window.zoomLevel": 0,
+  "files.simpleDialog.enable": true,
+  "editor.fontFamily": "DejaVuSansM Nerd Font Mono",
+  "terminal.integrated.fontFamily": "DejaVuSansM Nerd Font Mono",
+  "gitlens.telemetry.enabled": false,
+  "dotnetAcquisitionExtension.enableTelemetry": false,
+  "dotnet.dotnetPath": "/home/paul/.nix-profile/bin",
+  "nix.enableLanguageServer": true, // Enable LSP.
+  "nix.serverPath": "nil" // The path to the LSP server executable.
+}

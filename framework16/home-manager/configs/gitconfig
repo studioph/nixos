@@ -1,0 +1,20 @@
+[user]
+    name = Paul Hutchings
+    email = dev@studiop.page
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[credential]
+    helper = cache --timeout=1800
+    credentialStore = secretservice
+[core]
+    editor = codium
+    askpass = /usr/bin/ksshaskpass
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
+[filter "spacify"]
+    clean = expand --tabs=4 --initial
