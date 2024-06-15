@@ -17,7 +17,7 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    nurpkgs.url = github:nix-community/NUR;
+    nurpkgs.url = "github:nix-community/NUR";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
 
