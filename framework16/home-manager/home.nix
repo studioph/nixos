@@ -163,6 +163,8 @@
 #         enableExtensionUpdateCheck = false;
         mutableExtensionsDir = true; # Required for stupid .NET extensions
         extensions = with extensions.open-vsx; [
+            antfu.icons-carbon
+            equinusocio.vsc-material-theme
             rust-lang.rust-analyzer
             redhat.java
             muhammad-sammy.csharp
