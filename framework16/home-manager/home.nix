@@ -43,7 +43,7 @@
         };
 
         file."giignore" = {
-            source = "./configs/global.gitignore";
+            source = ./configs/global.gitignore;
             target = ".gitignore";
         };
 
@@ -157,8 +157,10 @@
     programs.vscode = {
         enable = true;
         package = pkgs.vscodium.fhs;
-        enableUpdateCheck = false;
-        enableExtensionUpdateCheck = false;
+        # Disabled otherwise it causes file conflict since home-manager tries to generate a separate settings.json
+        # These are set in the symlinked settings.json from the configs folder
+#         enableUpdateCheck = false;
+#         enableExtensionUpdateCheck = false;
         mutableExtensionsDir = true; # Required for stupid .NET extensions
         extensions = with extensions.open-vsx; [
             rust-lang.rust-analyzer
