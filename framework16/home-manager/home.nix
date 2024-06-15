@@ -88,7 +88,7 @@
             protonmail-bridge
             kdePackages.korganizer
             qownnotes
-            kdePackages.kamoso
+            libsForQt5.kamoso
             nil
         ];
 
