@@ -12,6 +12,7 @@
 [core]
     editor = codium
     askpass = /usr/bin/ksshaskpass
+    excludesfile = /home/paul/.gitignore
 [init]
     defaultBranch = main
 [pull]
