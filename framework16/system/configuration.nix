@@ -110,7 +110,7 @@
     usbutils
     pciutils
     nmap
-    libsForQt5.plasma-thunderbolt
+    kdePackages.plasma-thunderbolt
     thunderbolt
     cifs-utils
     nfs-utils

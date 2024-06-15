@@ -57,38 +57,38 @@
             bitwarden
             gomplate
             marktext
-            libsForQt5.krdc
+            kdePackages.krdc
             ungoogled-chromium
             talosctl
             terraform
             libreoffice-qt
             ffmpeg
             xdg-desktop-portal
-            libsForQt5.xdg-desktop-portal-kde
-            libsForQt5.kdeconnect-kde
+            kdePackages.xdg-desktop-portal-kde
+            kdePackages.kdeconnect-kde
             nodejs_20
-            libsForQt5.plasma-workspace-wallpapers
-            libsForQt5.plasma-browser-integration
+            kdePackages.plasma-workspace-wallpapers
+            kdePackages.plasma-browser-integration
             nerdfonts
             nextcloud-client
-            libsForQt5.kolourpaint
+            kdePackages.kolourpaint
             vlc
-            libsForQt5.filelight
-            libsForQt5.skanpage
+            kdePackages.filelight
+            kdePackages.skanpage
             protonmail-bridge
-            libsForQt5.kweather
-            libsForQt5.kontact
+            kdePackages.kweather
+            kdePackages.kontact
             vimix-cursors
             papirus-icon-theme
             tela-icon-theme
             fluent-icon-theme
             dotnet-sdk_7
             xournalpp
-            libsForQt5.kcalc
+            kdePackages.kcalc
             protonmail-bridge
-            libsForQt5.korganizer
+            kdePackages.korganizer
             qownnotes
-            libsForQt5.kamoso
+            kdePackages.kamoso
             nil
         ];
 
@@ -204,8 +204,6 @@
         #nativeMessagingHosts.packages = [ pkgs.plasma-browser-integration ];
         profiles.studiop = {
             isDefault = true;
-#             bookmarks = [];
-#             containers = [];
             extensions = with pkgs.nur.repos.rycee.firefox-addons; [
                 ublock-origin
                 bitwarden
@@ -223,29 +221,6 @@
               default = "DuckDuckGo";
               force = true;
             };
-#             settings = {
-#                 "privacy.resistFingerprinting" = true;
-#                 "dom.webnotifications.enabled" = false;
-#                 "browser.startup.homepage" = "moz-extension://028e2385-e409-46de-9e24-842e594bfff4/index.html";
-#                 "browser.search.suggest.enabled" = false;
-#                 "privacy.donottrackheader.enabled" = true;
-#                 "privacy.clearOnShutdown.offlineApps" = true;
-#                 "privacy.sanitize.sanitizeOnShutdown" = true;
-#                 "signon.rememberSignons" = false;
-#                 "app.shield.optoutstudies.enabled" = true;
-#                 "datareporting.healthreport.uploadEnabled" = true;
-#                 "dom.security.https_only_mode" = true;
-#                 "dom.security.https_only_mode_ever_enabled" = true;
-#                 "network.dns.disablePrefetch" = true;
-#                 "permissions.default.desktop-notification" = 2;
-#                 "permissions.default.camera" = 2;
-#                 "permissions.default.geo" = 2;
-#                 "permissions.default.microphone" = 2;
-#                 "permissions.default.xr" = 2;
-#                 "media.autoplay.default" = 5;
-# #                 "widget.use-xdg-desktop-portal.file-picker" = 1;
-# #                 "widget.use-xdg-desktop-portal.mime-handler" = 1;
-#             };
         };
     };
 
