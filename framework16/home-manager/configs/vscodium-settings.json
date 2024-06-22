@@ -1,4 +1,5 @@
 {
+  "$schema": "vscode://schemas/settings/user",
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
@@ -28,10 +29,6 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.organizeImports": true
-    },
     "editor.detectIndentation": false,
     "editor.formatOnSave": true,
     "editor.tabSize": 4,
@@ -91,7 +88,7 @@
   "material-icon-theme.showWelcomeMessage": false,
   "python.experiments.enabled": false,
   "python.formatting.provider": "black",
-  "python.languageServer": "Pylance",
+  "python.languageServer": "None",
   "python.linting.enabled": true,
   "python.terminal.activateEnvironment": false,
   "python.testing.pytestArgs": [
@@ -105,7 +102,7 @@
   "pythonTestExplorer.testFramework": "pytest",
   "redhat.telemetry.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "update.mode": "none",
   "update.showReleaseNotes": false,
@@ -117,10 +114,10 @@
   },
   "vscode-kubernetes.helm-path.linux": "/usr/sbin/helm",
   "vscode-kubernetes.kubectl-path.linux": "/usr/bin/kubectl",
-  "workbench.colorTheme": "Material Theme",
+  "workbench.colorTheme": "Material Theme High Contrast",
   "workbench.enableExperiments": false,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.productIconTheme": "material-product-icons",
+  "workbench.productIconTheme": "icons-carbon",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "yaml.customTags": [
     "!And",
@@ -163,8 +160,8 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.organizeImports": true
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
     },
     "editor.formatOnSave": true
   },
@@ -191,5 +188,5 @@
   "dotnetAcquisitionExtension.enableTelemetry": false,
   "dotnet.dotnetPath": "/home/paul/.nix-profile/bin",
   "nix.enableLanguageServer": true, // Enable LSP.
-  "nix.serverPath": "nil" // The path to the LSP server executable.
+  "nix.serverPath": "/home/paul/.nix-profile/bin/nil" // The path to the LSP server executable.
 }
