@@ -13,7 +13,8 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "mem_sleep_default=deep" ];
+  # boot.kernelParams = [ "mem_sleep_default=deep" ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "studiop"; # Define your hostname.
   networking.hostId = "007f0200";
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -48,7 +49,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
