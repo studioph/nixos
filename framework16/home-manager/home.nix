@@ -75,7 +75,7 @@
             vlc
             kdePackages.filelight
             kdePackages.skanpage
-            protonmail-bridge
+            protonmail-bridge-gui
             kdePackages.kweather
             kdePackages.kontact
             vimix-cursors
