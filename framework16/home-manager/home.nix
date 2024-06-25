@@ -90,6 +90,8 @@
             qownnotes
             libsForQt5.kamoso
             nil
+            kaidan
+            dino
         ];
 
         sessionVariables = {
