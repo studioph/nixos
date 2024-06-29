@@ -48,7 +48,7 @@
         };
 
         packages = with pkgs; [
-            kate
+            kdePackages.kate
             python3
             rustup
             poetry
