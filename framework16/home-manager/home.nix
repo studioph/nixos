@@ -77,7 +77,6 @@
             kdePackages.skanpage
             protonmail-bridge-gui
             kdePackages.kweather
-            kdePackages.kontact
             vimix-cursors
             papirus-icon-theme
             tela-icon-theme
@@ -86,12 +85,12 @@
             xournalpp
             kdePackages.kcalc
             protonmail-bridge
-            kdePackages.korganizer
             qownnotes
             libsForQt5.kamoso
             nil
             kaidan
             dino
+            kdePackages.merkuro
         ];
 
         sessionVariables = {
