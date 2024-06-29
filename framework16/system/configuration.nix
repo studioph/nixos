@@ -13,7 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  # boot.kernelParams = [ "mem_sleep_default=deep" ];
+  boot.kernelParams = [ "amdgpu.abmlevel=0" ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "studiop"; # Define your hostname.
   networking.hostId = "007f0200";
