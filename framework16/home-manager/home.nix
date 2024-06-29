@@ -91,6 +91,8 @@
             kaidan
             dino
             kdePackages.merkuro
+            kdePackages.akonadi
+            kdePackages.kdepim-runtime
         ];
 
         sessionVariables = {
