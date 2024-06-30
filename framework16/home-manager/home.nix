@@ -93,6 +93,7 @@
             kdePackages.merkuro
             kdePackages.akonadi
             kdePackages.kdepim-runtime
+            gtkterm
         ];
 
         sessionVariables = {
