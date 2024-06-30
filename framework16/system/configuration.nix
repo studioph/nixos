@@ -86,7 +86,7 @@
   users.users."${username}" = {
     isNormalUser = true;
     description = "Paul Hutchings";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" ];
   };
   users.users.root = {
     hashedPassword = "!";
