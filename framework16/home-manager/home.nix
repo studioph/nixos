@@ -93,6 +93,7 @@
             kdePackages.merkuro
             kdePackages.akonadi
             kdePackages.kdepim-runtime
+            kdePackages.k3b
             go-task
             gtkterm
             drawio
