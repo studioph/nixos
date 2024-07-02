@@ -203,6 +203,7 @@
 #             extensions.vscode-marketplace.ms-python.vscode-pylance
             extensions.vscode-marketplace.ms-dotnettools.vscode-dotnet-runtime
 #             extensions.vscode-marketplace.llllvvuu.llllvvuu-glspc
+            devsense.phptools-vscode
         ];
     };
 
