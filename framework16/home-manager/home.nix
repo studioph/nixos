@@ -94,6 +94,7 @@
             kdePackages.akonadi
             kdePackages.kdepim-runtime
             gtkterm
+            drawio
         ];
 
         sessionVariables = {
