@@ -96,6 +96,7 @@
             go-task
             gtkterm
             drawio
+            android-tools
         ];
 
         sessionVariables = {
