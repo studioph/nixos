@@ -88,7 +88,6 @@
             qownnotes
             libsForQt5.kamoso
             nil
-            kaidan
             dino
             kdePackages.merkuro
             kdePackages.akonadi
