@@ -60,7 +60,6 @@
             kdePackages.krdc
             ungoogled-chromium
             talosctl
-            terraform
             libreoffice-qt
             ffmpeg
             xdg-desktop-portal
@@ -97,6 +96,7 @@
             gtkterm
             drawio
             android-tools
+            opentofu
         ];
 
         sessionVariables = {
@@ -246,6 +246,7 @@
         enable = true;
         shellAliases = {
             docker = "podman";
+            terraform = "tofu";
         };
     };
 
