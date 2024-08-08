@@ -97,6 +97,8 @@
             drawio
             android-tools
             opentofu
+            kdePackages.kdenlive
+            p7zip # TODO: Remove once Ark works without it
         ];
 
         sessionVariables = {
