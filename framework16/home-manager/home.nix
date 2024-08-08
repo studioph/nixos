@@ -100,10 +100,6 @@
             kdePackages.kdenlive
             p7zip # TODO: Remove once Ark works without it
         ];
-
-        sessionVariables = {
-            DOTNET_CLI_TELEMETRY_OPTOUT = "1";
-        };
     };
 
     dconf.settings = {
