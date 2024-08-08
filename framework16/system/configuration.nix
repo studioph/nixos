@@ -89,7 +89,7 @@
   users.users."${username}" = {
     isNormalUser = true;
     description = "Paul Hutchings";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" "scanner" "lp" ];
   };
   users.users.root = {
     hashedPassword = "!";
@@ -205,4 +205,9 @@
       enable = true;
       package = pkgs.mullvad-vpn;
     };
+
+  hardware.sane = {
+    enable = true;
+    extraBackends = [ pkgs.epkowa ];
+  };
 }
