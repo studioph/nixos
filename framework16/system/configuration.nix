@@ -121,6 +121,8 @@
     unrar
     virtiofsd
     openssl
+    amdgpu_top
+    usbutils
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
@@ -204,7 +206,7 @@
   services.mullvad-vpn = {
       enable = true;
       package = pkgs.mullvad-vpn;
-    };
+  };
 
   environment.sessionVariables = {
       DOTNET_CLI_TELEMETRY_OPTOUT = "1";
