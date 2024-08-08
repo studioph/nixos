@@ -172,7 +172,7 @@
             equinusocio.vsc-material-theme
             rust-lang.rust-analyzer
             redhat.java
-            muhammad-sammy.csharp
+#             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
             pkief.material-icon-theme
             redhat.vscode-xml
             timonwong.shellcheck
@@ -202,6 +202,8 @@
             extensions.vscode-marketplace.ms-dotnettools.vscode-dotnet-runtime
 #             extensions.vscode-marketplace.llllvvuu.llllvvuu-glspc
             devsense.phptools-vscode
+            ritwickdey.liveserver
+            csharpier.csharpier-vscode
         ];
     };
 
