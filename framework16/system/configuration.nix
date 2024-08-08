@@ -206,6 +206,11 @@
       package = pkgs.mullvad-vpn;
     };
 
+  environment.sessionVariables = {
+      DOTNET_CLI_TELEMETRY_OPTOUT = "1";
+      DOTNET_ROOT = "${pkgs.dotnet-sdk_7}";
+  };
+
   hardware.sane = {
     enable = true;
     extraBackends = [ pkgs.epkowa ];
