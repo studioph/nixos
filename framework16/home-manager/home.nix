@@ -42,7 +42,7 @@
             target = ".mozilla/firefox/studiop/user-overrides.js";
         };
 
-        file."giignore" = {
+        file."gitignore" = {
             source = ./configs/global.gitignore;
             target = ".gitignore";
         };
