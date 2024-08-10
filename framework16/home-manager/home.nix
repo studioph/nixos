@@ -99,6 +99,7 @@
             opentofu
             kdePackages.kdenlive
             p7zip # TODO: Remove once Ark works without it
+            go-task
         ];
     };
 
