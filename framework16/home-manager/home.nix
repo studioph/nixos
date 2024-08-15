@@ -103,6 +103,7 @@
             podman-tui
             dive
             podman-compose
+            kdePackages.isoimagewriter
         ];
     };
 
