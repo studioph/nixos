@@ -90,15 +90,11 @@
     isNormalUser = true;
     description = "Paul Hutchings";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" "scanner" "lp" ];
-    subUidRanges = lib.mkForce [
-      { count = 65536; startUid = 10000; }
-    ];
-    subGidRanges = lib.mkForce [
-      { count = 65536; startGid = 10000; }
-    ];
+    autoSubUidGidRange = true;
   };
   users.users.root = {
     hashedPassword = "!";
+    autoSubUidGidRange = true;
   };
   users.mutableUsers = true;
 
