@@ -108,7 +108,7 @@
     dnsutils
     rclone
     rsync
-    yq
+    yq-go
     zip
     unzip
     pigz
