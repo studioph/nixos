@@ -67,7 +67,8 @@
   "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
   "files.associations": {
-    "*.unit": "systemd-unit-file"
+    "*.unit": "systemd-unit-file",
+    "talosconfig": "yaml"
   },
   "files.exclude": {
     "**/.classpath": true,
