@@ -184,23 +184,23 @@
             adguard.adblock
             antfu.icons-carbon
             csharpier.csharpier-vscode
-            #detachhead.basedpyright
-            #devsense.phptools-vscode
+            detachhead.basedpyright
+            devsense.phptools-vscode
             eamodio.gitlens
             ecmel.vscode-html-css
             equinusocio.vsc-material-theme
             golang.go
             hangxingliu.vscode-systemd-support
             hashicorp.terraform
-            #jnoortheen.nix-ide
+            jnoortheen.nix-ide
             mechatroner.rainbow-csv
             ms-azuretools.vscode-docker
             ms-kubernetes-tools.vscode-kubernetes-tools
             ms-python.black-formatter
             ms-python.isort
             ms-python.pylint
-            #ms-python.python
-            #ms-vscode.hexeditor
+            ms-python.python
+            ms-vscode.hexeditor
             pkief.material-icon-theme
             redhat.java
             redhat.vscode-xml
