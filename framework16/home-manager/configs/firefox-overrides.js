@@ -44,3 +44,4 @@ user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("signon.rememberSignons", false);
+user_pref("dom.private-attribution.submission.enabled", false);
