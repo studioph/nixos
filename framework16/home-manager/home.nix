@@ -1,4 +1,4 @@
-{ pkgs, username, extensions, ... }:
+{ pkgs, username, extensions, unstable, ... }:
 
 {
     # Home Manager needs a bit of information about you and the
@@ -47,7 +47,7 @@
             target = ".gitignore";
         };
 
-        packages = with pkgs; [
+        packages = (with pkgs; [
             kdePackages.kate
             python3
             rustup
@@ -109,7 +109,10 @@
             kubernetes-helmPlugins.helm-diff
             kubernetes-helmPlugins.helm-git
             kubectl
-        ];
+        ])
+        ++ (with unstable; [
+            dbgate
+        ]);
     };
 
     dconf.settings = {
@@ -171,50 +174,51 @@
 
     programs.vscode = {
         enable = true;
-        package = pkgs.vscodium.fhs;
+        package = unstable.vscodium-fhs;
         # Disabled otherwise it causes file conflict since home-manager tries to generate a separate settings.json
         # These are set in the symlinked settings.json from the configs folder
 #         enableUpdateCheck = false;
 #         enableExtensionUpdateCheck = false;
         mutableExtensionsDir = true; # Required for stupid .NET extensions
-        extensions = with extensions.open-vsx; [
+        extensions = (with extensions.open-vsx; [
+            adguard.adblock
             antfu.icons-carbon
-            equinusocio.vsc-material-theme
-            rust-lang.rust-analyzer
-            redhat.java
-#             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
-            pkief.material-icon-theme
-            redhat.vscode-xml
-            timonwong.shellcheck
-            hashicorp.terraform
-            ms-python.python
-            redhat.vscode-yaml
-            rust-lang.rust-analyzer
-            golang.go
-            ms-kubernetes-tools.vscode-kubernetes-tools
-            hangxingliu.vscode-systemd-support
+            csharpier.csharpier-vscode
+            #detachhead.basedpyright
+            #devsense.phptools-vscode
             eamodio.gitlens
             ecmel.vscode-html-css
+            equinusocio.vsc-material-theme
+            golang.go
+            hangxingliu.vscode-systemd-support
+            hashicorp.terraform
+            #jnoortheen.nix-ide
             mechatroner.rainbow-csv
-            ms-vscode.hexeditor
-            tamasfe.even-better-toml
-            yzhang.markdown-all-in-one
-            tyriar.sort-lines
-            adguard.adblock
             ms-azuretools.vscode-docker
-            tomoyukim.vscode-mermaid-editor
-            jnoortheen.nix-ide
+            ms-kubernetes-tools.vscode-kubernetes-tools
             ms-python.black-formatter
-            ms-python.pylint
             ms-python.isort
-            detachhead.basedpyright
-#             extensions.vscode-marketplace.ms-python.vscode-pylance
-            extensions.vscode-marketplace.ms-dotnettools.vscode-dotnet-runtime
-#             extensions.vscode-marketplace.llllvvuu.llllvvuu-glspc
-            devsense.phptools-vscode
+            ms-python.pylint
+            #ms-python.python
+            #ms-vscode.hexeditor
+            pkief.material-icon-theme
+            redhat.java
+            redhat.vscode-xml
+            redhat.vscode-yaml
             ritwickdey.liveserver
-            csharpier.csharpier-vscode
-        ];
+            rust-lang.rust-analyzer
+            rust-lang.rust-analyzer
+            tamasfe.even-better-toml
+            timonwong.shellcheck
+            tomoyukim.vscode-mermaid-editor
+            tyriar.sort-lines
+            yzhang.markdown-all-in-one
+#             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
+
+        ])
+        ++ (with extensions.vscode-marketplace; [
+            ms-dotnettools.vscode-dotnet-runtime
+        ]);
     };
 
     programs.yt-dlp.enable = true;
