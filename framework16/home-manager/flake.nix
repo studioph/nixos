@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
@@ -25,7 +26,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nurpkgs, hardware, plasma-manager, nix-flatpak, nix-vscode-extensions, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nurpkgs, hardware, plasma-manager, nix-flatpak, nix-vscode-extensions, ... }:
   let
     pkgs = import nixpkgs {
       system = "x86_64-linux";
@@ -33,6 +34,10 @@
       overlays = [
         nurpkgs.overlay
       ];
+    };
+    unstable = import inputs.nixpkgs-unstable {
+      system = "x86_64-linux";
+      config.allowUnfree = true;
     };
     username = "paul";
     extensions = nix-vscode-extensions.extensions.x86_64-linux;
@@ -54,7 +59,7 @@
           plasma-manager.homeManagerModules.plasma-manager
           nix-flatpak.homeManagerModules.nix-flatpak
         ];
-        extraSpecialArgs = { inherit inputs username extensions; };
+        extraSpecialArgs = { inherit inputs username extensions unstable; };
       };
     };
 }

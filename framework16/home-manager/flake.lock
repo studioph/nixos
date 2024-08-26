@@ -122,6 +122,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1724224976,
+        "narHash": "sha256-Z/ELQhrSd7bMzTO8r7NZgi9g5emh+aRKoCdaAv5fiO0=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "c374d94f1536013ca8e92341b540eba4c22f9c62",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1724242322,
@@ -140,11 +156,11 @@
     },
     "nurpkgs": {
       "locked": {
-        "lastModified": 1724323712,
-        "narHash": "sha256-w/x4HmZm6NpZ4xz5c48tIAymZny8/OMQUMR0yEx5s50=",
+        "lastModified": 1724348704,
+        "narHash": "sha256-h8HB+4AiVZAe3ie6zYOmJco7QkKRPC7iHfChsoSOHm4=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "e78affd5313eef31717a16f81bc658f5e5be2154",
+        "rev": "bf3ebc298e0a5091f4f41cb45f38b31cac050e62",
         "type": "github"
       },
       "original": {
@@ -183,6 +199,7 @@
         "nix-flatpak": "nix-flatpak",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-unstable": "nixpkgs-unstable",
         "nurpkgs": "nurpkgs",
         "plasma-manager": "plasma-manager"
       }
