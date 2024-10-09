@@ -187,7 +187,13 @@
   "terminal.integrated.fontFamily": "DejaVuSansM Nerd Font Mono",
   "gitlens.telemetry.enabled": false,
   "dotnetAcquisitionExtension.enableTelemetry": false,
-  "dotnet.dotnetPath": "/home/paul/.nix-profile/bin",
   "nix.enableLanguageServer": true, // Enable LSP.
-  "nix.serverPath": "/home/paul/.nix-profile/bin/nil" // The path to the LSP server executable.
+  "nix.serverPath": "/home/paul/.nix-profile/bin/nil",
+  "dotnet.dotnetPath": "/home/paul/.nix-profile/bin/dotnet",
+    "[csharp]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    }
 }
