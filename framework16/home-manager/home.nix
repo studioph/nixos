@@ -80,7 +80,7 @@
             papirus-icon-theme
             tela-icon-theme
             fluent-icon-theme
-            dotnet-sdk_7
+            dotnet-sdk_8
             xournalpp
             kdePackages.kcalc
             protonmail-bridge
