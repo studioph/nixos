@@ -47,6 +47,11 @@
             target = ".gitignore";
         };
 
+        file."pdm config" = {
+            source = ./configs/pdm.toml;
+            target = ".config/pdm/config.toml";
+        };
+
         packages = (with pkgs; [
             kdePackages.kate
             python3
