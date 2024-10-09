@@ -115,6 +115,7 @@
             kubernetes-helmPlugins.helm-git
             kubectl
             pyenv
+            webcord
         ])
         ++ (with unstable; [
             dbgate
