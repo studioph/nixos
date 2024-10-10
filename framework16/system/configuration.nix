@@ -48,8 +48,11 @@
 #   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "catppuccin-frappe";
+  }
   services.desktopManager.plasma6.enable = true;
   services.displayManager.defaultSession = "plasma";
 
@@ -128,6 +131,16 @@
     amdgpu_top
     usbutils
     kdePackages.sddm-kcm
+    (
+      pkgs.catppuccin-sddm.override {
+        flavor = "frappe";
+#         font  = "Noto Sans";
+#         fontSize = "9";
+#         background = "${./wallpaper.png}";
+        loginBackground = true;
+        clockEnabled = true;
+      }
+    )
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
