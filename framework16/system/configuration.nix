@@ -134,8 +134,6 @@
     (
       pkgs.catppuccin-sddm.override {
         flavor = "frappe";
-#         font  = "Noto Sans";
-#         fontSize = "9";
         font  = "Noto Sans";
         fontSize = "12";
         background = "${./catppuccin.jpg}";
@@ -237,7 +235,6 @@
 
   environment.sessionVariables = {
       DOTNET_CLI_TELEMETRY_OPTOUT = "1";
-      DOTNET_ROOT = "${pkgs.dotnet-sdk_7}";
   };
 
   hardware.sane = {
