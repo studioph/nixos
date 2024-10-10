@@ -136,9 +136,9 @@
         flavor = "frappe";
 #         font  = "Noto Sans";
 #         fontSize = "9";
-#         background = "${./wallpaper.png}";
+        background = "${./catppuccin.jpg}";
         loginBackground = true;
-        clockEnabled = true;
+#         clockEnabled = true;
       }
     )
   ];
