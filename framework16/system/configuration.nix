@@ -125,6 +125,7 @@
     openssl
     amdgpu_top
     usbutils
+    kdePackages.sddm-kcm
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
