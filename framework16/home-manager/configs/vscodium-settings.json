@@ -181,7 +181,7 @@
   },
   "docker.host": "unix:///run/user/1000/podman/podman.sock",
   "docker.dockerPath": "/run/current-system/sw/bin/podman",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 2,
   "files.simpleDialog.enable": true,
   "editor.fontFamily": "DejaVuSansM Nerd Font Mono",
   "terminal.integrated.fontFamily": "DejaVuSansM Nerd Font Mono",
