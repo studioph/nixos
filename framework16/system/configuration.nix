@@ -241,4 +241,6 @@
     enable = true;
     extraBackends = [ pkgs.epkowa ];
   };
+
+  security.pki.certificateFiles = [./universal-root.crt.pem];
 }
