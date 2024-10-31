@@ -97,6 +97,7 @@
             kdePackages.akonadi
             kdePackages.kdepim-runtime
             kdePackages.k3b
+            kdePackages.ksshaskpass
             kid3
             go-task
             gtkterm
