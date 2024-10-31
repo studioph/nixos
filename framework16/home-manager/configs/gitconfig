@@ -11,7 +11,7 @@
     credentialStore = secretservice
 [core]
     editor = codium
-    askpass = /usr/bin/ksshaskpass
+    askpass = /usr/bin/env ksshaskpass
     excludesfile = /home/paul/.gitignore
 [init]
     defaultBranch = main
