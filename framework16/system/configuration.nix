@@ -94,7 +94,7 @@
   users.users."${username}" = {
     isNormalUser = true;
     description = "Paul Hutchings";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" "scanner" "lp" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" "scanner" "lp" "cdrom" ];
     autoSubUidGidRange = true;
   };
   users.users.root = {
