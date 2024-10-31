@@ -181,7 +181,7 @@
     };
 
     programs.vscode = {
-        enable = false;
+        enable = true;
         package = pkgs.vscodium;
         # Disabled otherwise it causes file conflict since home-manager tries to generate a separate settings.json
         # These are set in the symlinked settings.json from the configs folder
