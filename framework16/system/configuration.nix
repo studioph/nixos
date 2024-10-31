@@ -44,9 +44,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm = {
     enable = true;
@@ -56,8 +53,10 @@
   services.desktopManager.plasma6.enable = true;
   services.displayManager.defaultSession = "plasma";
 
-  # Configure keymap in X11
   services.xserver = {
+    # Enable the X11 windowing system.
+    enable = true;
+    # Configure keymap in X11
     xkb = {
       variant = "";
       layout = "us";
