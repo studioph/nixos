@@ -121,7 +121,6 @@
         ])
         ++ (with unstable; [
             dbgate
-            makemkv
         ]);
     };
 
