@@ -15,6 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = [ "amdgpu.abmlevel=0" ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelModules = ["sg"];
   networking.hostName = "studiop"; # Define your hostname.
   networking.hostId = "007f0200";
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
