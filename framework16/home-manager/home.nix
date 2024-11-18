@@ -118,6 +118,7 @@
             kubectl
             pyenv
             webcord
+            netcoredbg
         ])
         ++ (with unstable; [
             dbgate
