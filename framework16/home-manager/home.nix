@@ -119,6 +119,8 @@
             pyenv
             webcord
             netcoredbg
+            hunspell
+            hunspellDicts.en_US
         ])
         ++ (with unstable; [
             dbgate
