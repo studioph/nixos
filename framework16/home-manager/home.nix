@@ -121,6 +121,7 @@
             netcoredbg
             hunspell
             hunspellDicts.en_US
+            jetbrains.rider
         ])
         ++ (with unstable; [
             dbgate
