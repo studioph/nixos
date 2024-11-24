@@ -226,6 +226,7 @@
             tomoyukim.vscode-mermaid-editor
             tyriar.sort-lines
             yzhang.markdown-all-in-one
+            fernandoescolar.vscode-solution-explorer
 #             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
 
         ])
