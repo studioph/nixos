@@ -208,11 +208,7 @@ in
 #         enableUpdateCheck = false;
 #         enableExtensionUpdateCheck = false;
         mutableExtensionsDir = true; # Required for stupid .NET extensions
-        extensions = (with extensions.open-vsx; [
-#             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
-
-        ])
-        ++ (with compatibleExtensions.open-vsx; [
+        extensions = (with compatibleExtensions.open-vsx; [
             adguard.adblock
             antfu.icons-carbon
             csharpier.csharpier-vscode
@@ -244,12 +240,13 @@ in
             tomoyukim.vscode-mermaid-editor
             tyriar.sort-lines
             yzhang.markdown-all-in-one
+#             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
         ])
         ++ (with compatibleExtensions.open-vsx-release; [
             eamodio.gitlens
             rust-lang.rust-analyzer
         ])
-        ++ (with extensions.vscode-marketplace; [
+        ++ (with compatibleExtensions.vscode-marketplace; [
             ms-dotnettools.vscode-dotnet-runtime
         ]);
     };
