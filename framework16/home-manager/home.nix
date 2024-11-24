@@ -1,5 +1,7 @@
 { pkgs, username, extensions, unstable, ... }:
 
+let dotnetSDK = pkgs.dotnet-sdk_8;
+in
 {
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
@@ -85,7 +87,7 @@
             papirus-icon-theme
             tela-icon-theme
             fluent-icon-theme
-            dotnet-sdk_8
+            dotnetSDK # Defined as let var
             xournalpp
             kdePackages.kcalc
             protonmail-bridge
@@ -126,6 +128,10 @@
         ++ (with unstable; [
             dbgate
         ]);
+
+        sessionVariables = {
+            DOTNET_ROOT = "${dotnetSDK}";
+        };
     };
 
     dconf.settings = {
