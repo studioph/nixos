@@ -1,6 +1,9 @@
 { pkgs, username, extensions, unstable, ... }:
 
-let dotnetSDK = pkgs.dotnet-sdk_8;
+let
+    dotnetSDK = pkgs.dotnet-sdk_8;
+    compatibleExtensions = extensions.forVSCodeVersion(pkgs.vscodium.version);
+
 in
 {
     # Home Manager needs a bit of information about you and the
@@ -206,19 +209,24 @@ in
 #         enableExtensionUpdateCheck = false;
         mutableExtensionsDir = true; # Required for stupid .NET extensions
         extensions = (with extensions.open-vsx; [
+#             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
+
+        ])
+        ++ (with compatibleExtensions.open-vsx; [
             adguard.adblock
             antfu.icons-carbon
             csharpier.csharpier-vscode
             detachhead.basedpyright
             devsense.phptools-vscode
-            eamodio.gitlens
             ecmel.vscode-html-css
             equinusocio.vsc-material-theme
+            fernandoescolar.vscode-solution-explorer
             golang.go
             hangxingliu.vscode-systemd-support
             hashicorp.terraform
             jnoortheen.nix-ide
             mechatroner.rainbow-csv
+            mkhl.direnv
             ms-azuretools.vscode-docker
             ms-kubernetes-tools.vscode-kubernetes-tools
             ms-python.black-formatter
@@ -231,17 +239,15 @@ in
             redhat.vscode-xml
             redhat.vscode-yaml
             ritwickdey.liveserver
-            rust-lang.rust-analyzer
-            rust-lang.rust-analyzer
             tamasfe.even-better-toml
             timonwong.shellcheck
             tomoyukim.vscode-mermaid-editor
             tyriar.sort-lines
             yzhang.markdown-all-in-one
-            fernandoescolar.vscode-solution-explorer
-            mkhl.direnv
-#             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
-
+        ])
+        ++ (with compatibleExtensions.open-vsx-release; [
+            eamodio.gitlens
+            rust-lang.rust-analyzer
         ])
         ++ (with extensions.vscode-marketplace; [
             ms-dotnettools.vscode-dotnet-runtime
