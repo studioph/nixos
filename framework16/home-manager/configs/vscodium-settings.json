@@ -195,5 +195,6 @@
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
         "editor.defaultFormatter": "csharpier.csharpier-vscode"
-    }
+    },
+  "testExplorer.useNativeTesting": true
 }
