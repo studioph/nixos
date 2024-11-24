@@ -191,6 +191,12 @@ in
         };
     };
 
+    programs.direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      nix-direnv.enable = true;
+    };
+
     programs.vscode = {
         enable = true;
         package = pkgs.vscodium;
@@ -233,6 +239,7 @@ in
             tyriar.sort-lines
             yzhang.markdown-all-in-one
             fernandoescolar.vscode-solution-explorer
+            mkhl.direnv
 #             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
 
         ])
