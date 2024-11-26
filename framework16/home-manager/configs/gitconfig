@@ -10,7 +10,7 @@
     helper = cache --timeout=1800
     credentialStore = secretservice
 [core]
-    editor = codium
+    editor = codium --wait
     askpass = /home/paul/.nix-profile/bin/ksshaskpass
     excludesfile = /home/paul/.gitignore
 [init]
