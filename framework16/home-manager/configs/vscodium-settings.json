@@ -196,5 +196,6 @@
         "editor.formatOnType": true,
         "editor.defaultFormatter": "csharpier.csharpier-vscode"
     },
-  "testExplorer.useNativeTesting": true
+  "testExplorer.useNativeTesting": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }
