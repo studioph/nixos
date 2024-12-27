@@ -250,4 +250,6 @@
   services.udev.packages = [
     pkgs.android-udev-rules
   ];
+
+  programs.nix-ld.enable = true;
 }
