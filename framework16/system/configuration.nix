@@ -143,6 +143,7 @@
       }
     )
     smartmontools
+    kdePackages.print-manager
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
