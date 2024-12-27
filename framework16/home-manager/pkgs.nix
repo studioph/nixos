@@ -84,4 +84,8 @@ in
             DOTNET_ROOT = "${dotnetSDK}";
         };
       };
+
+      services.flatpak.packages = [
+        "com.usebottles.bottles"
+    ];
 }

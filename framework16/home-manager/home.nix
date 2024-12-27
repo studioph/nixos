@@ -157,8 +157,4 @@
             terraform = "tofu";
         };
     };
-
-    services.flatpak.packages = [
-        "com.usebottles.bottles"
-    ];
 }
