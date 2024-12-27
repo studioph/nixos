@@ -5,6 +5,7 @@
         ./codium.nix
         ./plasma.nix
         ./firefox.nix
+        ./terminal.nix
     ];
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
@@ -21,16 +22,6 @@
         # the Home Manager release notes for a list of state version
         # changes in each release.
         stateVersion = "23.11";
-
-        file."starship config" = {
-            source = ./configs/starship.toml;
-            target = ".config/starship.toml";
-        };
-
-        file."konsole profile" = {
-            source = ./configs/studiop.profile;
-            target = ".local/share/konsole/studiop.profile";
-        };
 
         file."gitconfig" = {
             source = ./configs/gitconfig;
@@ -96,19 +87,11 @@
         };
     };
 
-    programs.starship.enable = true;
-
     programs.thunderbird = {
         enable = true;
         profiles.studiop = {
             isDefault = true;
         };
-    };
-
-    programs.direnv = {
-      enable = true;
-      enableBashIntegration = true;
-      nix-direnv.enable = true;
     };
 
     programs.yt-dlp.enable = true;
@@ -121,12 +104,4 @@
 
     # Nicely reload system units when changing configs
     systemd.user.startServices = "sd-switch";
-
-    programs.bash = {
-        enable = true;
-        shellAliases = {
-            docker = "podman";
-            terraform = "tofu";
-        };
-    };
 }
