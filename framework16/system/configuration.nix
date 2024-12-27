@@ -112,7 +112,6 @@
     wireguard-tools
     curl
     dnsutils
-    rclone
     rsync
     yq-go
     zip

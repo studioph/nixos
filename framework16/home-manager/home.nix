@@ -127,6 +127,7 @@ in
             hunspell
             hunspellDicts.en_US
             jetbrains.rider
+            rclone
         ])
         ++ (with unstable; [
             dbgate
