@@ -190,17 +190,21 @@
   "nix.enableLanguageServer": true, // Enable LSP.
   "nix.serverPath": "/home/paul/.nix-profile/bin/nil",
   "dotnet.dotnetPath": "/home/paul/.nix-profile/bin/dotnet",
-    "[csharp]": {
-        "editor.maxTokenizationLineLength": 2500,
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.defaultFormatter": "csharpier.csharpier-vscode"
-    },
+  "[csharp]": {
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
   "testExplorer.useNativeTesting": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "nix.serverSettings": {
-    "formatting": {
-        "command": ["nixpkgs-fmt"]
+    "nil": {
+      "formatting": {
+        "command": [
+          "nixpkgs-fmt"
+        ]
       }
-  } 
+    }
+  }
 }
