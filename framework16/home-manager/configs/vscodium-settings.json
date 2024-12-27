@@ -197,5 +197,10 @@
         "editor.defaultFormatter": "csharpier.csharpier-vscode"
     },
   "testExplorer.useNativeTesting": true,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "nix.serverSettings": {
+    "formatting": {
+        "command": ["nixpkgs-fmt"]
+      }
+  } 
 }
