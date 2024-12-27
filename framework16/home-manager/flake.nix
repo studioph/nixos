@@ -27,39 +27,33 @@
   };
 
   outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nurpkgs, hardware, plasma-manager, nix-flatpak, nix-vscode-extensions, ... }:
-  let
-    pkgs = import nixpkgs {
-      system = "x86_64-linux";
-      config.allowUnfree = true;
-      overlays = [
-        nurpkgs.overlay
-      ];
-    };
-    unstable = import inputs.nixpkgs-unstable {
-      system = "x86_64-linux";
-      config.allowUnfree = true;
-    };
-    username = "paul";
-    extensions = nix-vscode-extensions.extensions.x86_64-linux;
-  in {
-    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
-
-#     nixosConfigurations.studiop = nixpkgs.lib.nixosSystem {
-#       specialArgs = { inherit inputs username; }; # allows access to flake inputs in nixos modules
-#       modules = [
-#         ./configuration.nix
-#       ];
-#     };
-
-    homeConfigurations."${username}" =
-      home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home.nix
-          plasma-manager.homeManagerModules.plasma-manager
-          nix-flatpak.homeManagerModules.nix-flatpak
+    let
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+        overlays = [
+          nurpkgs.overlay
         ];
-        extraSpecialArgs = { inherit inputs username extensions unstable; };
       };
+      unstable = import inputs.nixpkgs-unstable {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
+      username = "paul";
+      extensions = nix-vscode-extensions.extensions.x86_64-linux;
+    in
+    {
+      defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+
+      homeConfigurations."${username}" =
+        home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home.nix
+            plasma-manager.homeManagerModules.plasma-manager
+            nix-flatpak.homeManagerModules.nix-flatpak
+          ];
+          extraSpecialArgs = { inherit inputs username extensions unstable; };
+        };
     };
 }
