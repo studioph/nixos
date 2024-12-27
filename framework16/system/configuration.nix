@@ -142,6 +142,7 @@
 #         clockEnabled = true;
       }
     )
+    smartmontools
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
