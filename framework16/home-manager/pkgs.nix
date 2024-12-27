@@ -3,7 +3,8 @@ let
     dotnetSDK = pkgs.dotnet-sdk_8;
 in
 {
-          home.packages = (with pkgs; [
+        home = {
+            packages = (with pkgs; [
             kdePackages.kate
             python3
             rustup
@@ -78,4 +79,9 @@ in
         ++ (with unstable; [
             dbgate
         ]);
+
+        sessionVariables = {
+            DOTNET_ROOT = "${dotnetSDK}";
+        };
+      };
 }

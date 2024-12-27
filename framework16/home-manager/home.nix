@@ -1,7 +1,6 @@
-{ pkgs, username, extensions, unstable, ... }:
+{ pkgs, username, extensions, ... }:
 
 let
-    dotnetSDK = pkgs.dotnet-sdk_8;
     compatibleExtensions = extensions.forVSCodeVersion(pkgs.vscodium.version);
 
 in
@@ -58,12 +57,6 @@ in
         file."pdm config" = {
             source = ./configs/pdm.toml;
             target = ".config/pdm/config.toml";
-        };
-
-
-
-        sessionVariables = {
-            DOTNET_ROOT = "${dotnetSDK}";
         };
     };
 
