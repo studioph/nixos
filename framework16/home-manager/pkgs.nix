@@ -75,6 +75,7 @@ in
             hunspellDicts.en_US
             jetbrains.rider
             rclone
+            nixpkgs-fmt
         ])
         ++ (with unstable; [
             dbgate
