@@ -125,7 +125,6 @@
     thunderbolt
     cifs-utils
     nfs-utils
-    unrar
     virtiofsd
     openssl
     amdgpu_top
