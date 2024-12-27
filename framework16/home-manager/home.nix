@@ -6,6 +6,7 @@
         ./plasma.nix
         ./firefox.nix
         ./terminal.nix
+        ./dev.nix
     ];
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
@@ -22,21 +23,6 @@
         # the Home Manager release notes for a list of state version
         # changes in each release.
         stateVersion = "23.11";
-
-        file."gitconfig" = {
-            source = ./configs/gitconfig;
-            target = ".gitconfig";
-        };
-
-        file."gitignore" = {
-            source = ./configs/global.gitignore;
-            target = ".gitignore";
-        };
-
-        file."pdm config" = {
-            source = ./configs/pdm.toml;
-            target = ".config/pdm/config.toml";
-        };
     };
 
     dconf.settings = {
@@ -46,29 +32,11 @@
         };
     };
 
-    programs.awscli = {
-        enable = true;
-        settings = {
-            "default" = {
-                region = "us-east-1";
-                output = "json";
-            };
-            "archive" = {
-                region = "eu-north-1";
-                output = "json";
-            };
-        };
-    };
-
-    programs.go.enable = true;
+    
 
     programs.htop.enable = true;
 
-    programs.java.enable = true;
-
-    programs.k9s.enable = true;
-
-    programs.pyenv.enable = true;
+    
 
     programs.ssh = {
         enable = true;
@@ -100,7 +68,6 @@
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
 
-    programs.git.enable = true;
 
     # Nicely reload system units when changing configs
     systemd.user.startServices = "sd-switch";
