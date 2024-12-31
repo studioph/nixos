@@ -55,6 +55,11 @@
         user = "admin";
         identityFile = "~/.ssh/truenas";
       };
+      "osmc" = {
+        hostname = "osmc.studiop";
+        user = "osmc";
+        identityFile = "~/.ssh/osmc";
+      };
     };
   };
 
