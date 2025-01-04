@@ -76,6 +76,7 @@ in
       jetbrains.rider
       rclone
       nixpkgs-fmt
+      freecad
     ])
     ++ (with unstable; [
       dbgate
