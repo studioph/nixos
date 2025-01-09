@@ -198,7 +198,7 @@
   };
 
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
 #     nixPath = [
 #       "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
 #       "nixos-config=${config.users.users.${username}.home}/.config/nixos/config.nix"
