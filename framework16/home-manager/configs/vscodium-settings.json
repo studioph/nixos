@@ -92,9 +92,6 @@
   "python.languageServer": "None",
   "python.linting.enabled": true,
   "python.terminal.activateEnvironment": false,
-  "python.testing.pytestArgs": [
-    "--no-cov"
-  ],
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "python.venvFolders": [
