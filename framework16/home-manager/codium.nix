@@ -45,7 +45,7 @@ in
       tomoyukim.vscode-mermaid-editor
       tyriar.sort-lines
       yzhang.markdown-all-in-one
-      "3timeslazy".vscodium-devpodcontainers
+      # "3timeslazy".vscodium-devpodcontainers
       #             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
     ])
     ++ (with compatibleExtensions.open-vsx-release; [
