@@ -77,6 +77,7 @@ in
       rclone
       nixpkgs-fmt
       freecad
+      devpod
     ])
     ++ (with unstable; [
       dbgate
