@@ -61,6 +61,7 @@
         identityFile = "~/.ssh/osmc";
       };
     };
+    includes = [ "devpod.sshconfig"];
   };
 
   programs.thunderbird = {
