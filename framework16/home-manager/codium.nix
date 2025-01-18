@@ -45,6 +45,7 @@ in
       tomoyukim.vscode-mermaid-editor
       tyriar.sort-lines
       yzhang.markdown-all-in-one
+      jeanp413.open-remote-ssh
       # "3timeslazy".vscodium-devpodcontainers
       #             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
     ])
