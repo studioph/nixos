@@ -93,6 +93,7 @@
   users.users."${username}" = {
     isNormalUser = true;
     description = "Paul Hutchings";
+    group = "paul";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" "scanner" "lp" "cdrom" "adbusers"];
     autoSubUidGidRange = true;
   };
@@ -101,6 +102,7 @@
     autoSubUidGidRange = true;
   };
   users.mutableUsers = true;
+  users.groups."paul".gid = 1000;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
