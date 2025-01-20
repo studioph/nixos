@@ -78,8 +78,6 @@ in
       nixpkgs-fmt
       freecad
       devpod
-    ])
-    ++ (with unstable; [
       dbgate
     ]);
 
