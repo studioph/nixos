@@ -20,7 +20,7 @@ in
       detachhead.basedpyright
       devsense.phptools-vscode
       ecmel.vscode-html-css
-      equinusocio.vsc-material-theme
+      t3dotgg.vsc-material-theme-but-i-wont-sue-you
       fernandoescolar.vscode-solution-explorer
       golang.go
       hangxingliu.vscode-systemd-support
