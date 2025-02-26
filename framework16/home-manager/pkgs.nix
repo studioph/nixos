@@ -8,7 +8,6 @@ in
       kdePackages.kate
       python3
       rustup
-      poetry
       pdm
       virt-manager
       bitwarden
