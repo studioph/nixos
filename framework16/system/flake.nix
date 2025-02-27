@@ -23,6 +23,7 @@
         specialArgs = { inherit inputs username; }; # allows access to flake inputs in nixos modules
         modules = [
           ./configuration.nix
+          hardware.nixosModules.framework-16-7040-amd
         ];
       };
     };
