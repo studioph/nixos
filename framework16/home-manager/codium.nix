@@ -12,22 +12,17 @@ in
     # These are set in the symlinked settings.json from the configs folder
     #         enableUpdateCheck = false;
     #         enableExtensionUpdateCheck = false;
-    mutableExtensionsDir = true; # Required for stupid .NET extensions
     extensions = (with compatibleExtensions.open-vsx; [
       adguard.adblock
       antfu.icons-carbon
-      csharpier.csharpier-vscode
       detachhead.basedpyright
-      devsense.phptools-vscode
       ecmel.vscode-html-css
       t3dotgg.vsc-material-theme-but-i-wont-sue-you
-      fernandoescolar.vscode-solution-explorer
       golang.go
       hangxingliu.vscode-systemd-support
       hashicorp.terraform
       jnoortheen.nix-ide
       mechatroner.rainbow-csv
-      mkhl.direnv
       ms-azuretools.vscode-docker
       ms-kubernetes-tools.vscode-kubernetes-tools
       ms-python.black-formatter
@@ -36,7 +31,6 @@ in
       ms-python.python
       ms-vscode.hexeditor
       pkief.material-icon-theme
-      redhat.java
       redhat.vscode-xml
       redhat.vscode-yaml
       ritwickdey.liveserver
@@ -46,15 +40,14 @@ in
       tyriar.sort-lines
       yzhang.markdown-all-in-one
       jeanp413.open-remote-ssh
-      # "3timeslazy".vscodium-devpodcontainers
-      #             muhammad-sammy.csharp # Have to install manually cause it also dynamically downloads Omnisharp into it's folder
+    ])
+    ++ (with compatibleExtensions; [
+      # Specify separately otherwise the quoting doesn't work properly
+      open-vsx."3timeslazy".vscodium-devpodcontainers
     ])
     ++ (with compatibleExtensions.open-vsx-release; [
       eamodio.gitlens
       rust-lang.rust-analyzer
-    ])
-    ++ (with compatibleExtensions.vscode-marketplace; [
-      ms-dotnettools.vscode-dotnet-runtime
     ]);
   };
 
