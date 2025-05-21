@@ -1,7 +1,4 @@
-{ pkgs, unstable, ... }:
-let
-  dotnetSDK = pkgs.dotnet-sdk_8;
-in
+{ pkgs, ... }:
 {
   home = {
     packages = (with pkgs; [
@@ -36,7 +33,6 @@ in
       papirus-icon-theme
       tela-icon-theme
       fluent-icon-theme
-      dotnetSDK # Defined as let var
       xournalpp
       kdePackages.kcalc
       protonmail-bridge
@@ -76,10 +72,6 @@ in
       devpod
       dbgate
     ]);
-
-    sessionVariables = {
-      DOTNET_ROOT = "${dotnetSDK}";
-    };
   };
 
   services.flatpak.packages = [
