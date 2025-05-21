@@ -40,7 +40,6 @@ in
       xournalpp
       kdePackages.kcalc
       protonmail-bridge
-      qownnotes
       libsForQt5.kamoso
       nil
       dino
@@ -69,10 +68,8 @@ in
       kubectl
       pyenv
       webcord
-      netcoredbg
       hunspell
       hunspellDicts.en_US
-      jetbrains.rider
       rclone
       nixpkgs-fmt
       freecad
