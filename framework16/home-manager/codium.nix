@@ -1,13 +1,13 @@
-{ pkgs, extensions, ... }:
+{ pkgs, extensions, unstable, ... }:
 
 let
-  compatibleExtensions = extensions.forVSCodeVersion (pkgs.vscodium.version);
+  compatibleExtensions = extensions.forVSCodeVersion (unstable.vscodium.version);
 
 in
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    package = unstable.vscodium;
     # Disabled otherwise it causes file conflict since home-manager tries to generate a separate settings.json
     # These are set in the symlinked settings.json from the configs folder
     #         enableUpdateCheck = false;
