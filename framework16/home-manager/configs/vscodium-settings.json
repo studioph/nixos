@@ -186,7 +186,6 @@
   "dotnetAcquisitionExtension.enableTelemetry": false,
   "nix.enableLanguageServer": true, // Enable LSP.
   "nix.serverPath": "/home/paul/.nix-profile/bin/nil",
-  "dotnet.dotnetPath": "/home/paul/.nix-profile/bin/dotnet",
   "[csharp]": {
     "editor.maxTokenizationLineLength": 2500,
     "editor.formatOnSave": true,
