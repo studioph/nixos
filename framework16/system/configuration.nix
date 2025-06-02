@@ -143,6 +143,9 @@
     )
     smartmontools
     kdePackages.print-manager
+    kdePackages.ksystemlog
+    kdePackages.kompare
+    kdiff3
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
