@@ -5,7 +5,7 @@
     #nativeMessagingHosts.packages = [ pkgs.plasma-browser-integration ];
     profiles.studiop = {
       isDefault = true;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         ublock-origin
         bitwarden
         canvasblocker
@@ -19,7 +19,7 @@
         tabliss
       ];
       search = {
-        default = "DuckDuckGo";
+        default = "ddg";
         force = true;
       };
     };
