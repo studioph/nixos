@@ -44,7 +44,13 @@
       libreoffice-qt
       libsForQt5.kamoso
       marktext
-      nerdfonts
+      nerd-fonts.agave
+      nerd-fonts.dejavu-sans-mono
+      nerd-fonts.droid-sans-mono
+      nerd-fonts.hack
+      nerd-fonts.noto
+      nerd-fonts.roboto-mono
+      nerd-fonts.ubuntu-sans
       nextcloud-client
       nil
       nixpkgs-fmt
