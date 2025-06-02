@@ -12,7 +12,7 @@ in
     # These are set in the symlinked settings.json from the configs folder
     #         enableUpdateCheck = false;
     #         enableExtensionUpdateCheck = false;
-    extensions = (with compatibleExtensions.open-vsx; [
+    profiles.default.extensions = (with compatibleExtensions.open-vsx; [
       adguard.adblock
       antfu.icons-carbon
       detachhead.basedpyright
