@@ -2,75 +2,74 @@
 {
   home = {
     packages = (with pkgs; [
-      kdePackages.kate
-      python3
-      rustup
-      pdm
-      virt-manager
-      bitwarden
-      gomplate
-      marktext
-      kdePackages.krdc
-      ungoogled-chromium
-      talosctl
-      libreoffice-qt
-      ffmpeg
-      xdg-desktop-portal
-      kdePackages.xdg-desktop-portal-kde
-      kdePackages.kdeconnect-kde
-      nodejs_20
-      kdePackages.plasma-workspace-wallpapers
-      kdePackages.plasma-browser-integration
-      nerdfonts
-      nextcloud-client
-      kdePackages.kolourpaint
-      vlc
-      kdePackages.filelight
-      kdePackages.skanpage
-      protonmail-bridge-gui
-      kdePackages.kweather
-      vimix-cursors
-      papirus-icon-theme
-      tela-icon-theme
-      fluent-icon-theme
-      xournalpp
-      kdePackages.kcalc
-      protonmail-bridge
-      libsForQt5.kamoso
-      nil
-      dino
-      kdePackages.merkuro
-      kdePackages.akonadi
-      kdePackages.kdepim-runtime
-      kdePackages.k3b
-      kdePackages.ksshaskpass
-      kid3
-      go-task
-      gtkterm
-      drawio
       android-tools
-      opentofu
-      kdePackages.kdenlive
-      p7zip # TODO: Remove once Ark works without it
-      go-task
-      podman-tui
+      bitwarden
+      dbgate
+      devpod
+      dino
       dive
-      podman-compose
-      kdePackages.isoimagewriter
-      kubernetes-helm
+      drawio
+      ffmpeg
+      fluent-icon-theme
+      freecad
+      go-task
+      gomplate
+      gtkterm
       helmfile
-      kubernetes-helmPlugins.helm-diff
-      kubernetes-helmPlugins.helm-git
-      kubectl
-      pyenv
-      webcord
       hunspell
       hunspellDicts.en_US
-      rclone
+      kdePackages.akonadi
+      kdePackages.filelight
+      kdePackages.isoimagewriter
+      kdePackages.k3b
+      kdePackages.kate
+      kdePackages.kcalc
+      kdePackages.kdeconnect-kde
+      kdePackages.kdenlive
+      kdePackages.kdepim-runtime
+      kdePackages.kolourpaint
+      kdePackages.krdc
+      kdePackages.ksshaskpass
+      kdePackages.kweather
+      kdePackages.merkuro
+      kdePackages.plasma-browser-integration
+      kdePackages.plasma-workspace-wallpapers
+      kdePackages.skanpage
+      kdePackages.xdg-desktop-portal-kde
+      kid3
+      kubectl
+      kubernetes-helm
+      kubernetes-helmPlugins.helm-diff
+      kubernetes-helmPlugins.helm-git
+      libreoffice-qt
+      libsForQt5.kamoso
+      marktext
+      nerdfonts
+      nextcloud-client
+      nil
       nixpkgs-fmt
-      freecad
-      devpod
-      dbgate
+      nodejs_20
+      opentofu
+      p7zip # TODO: Remove once Ark works without it
+      papirus-icon-theme
+      pdm
+      podman-compose
+      podman-tui
+      protonmail-bridge
+      protonmail-bridge-gui
+      pyenv
+      python3
+      rclone
+      rustup
+      talosctl
+      tela-icon-theme
+      ungoogled-chromium
+      vimix-cursors
+      virt-manager
+      vlc
+      webcord
+      xdg-desktop-portal
+      xournalpp
     ]);
   };
 
