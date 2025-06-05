@@ -60,6 +60,11 @@
         user = "osmc";
         identityFile = "~/.ssh/osmc";
       };
+      "opnsense" = {
+        hostname = "opn1.studiop";
+        user = "admin";
+        identityFile = "~/.ssh/opn";
+      };
     };
     includes = [ "devpod.sshconfig"];
   };
