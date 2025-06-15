@@ -232,10 +232,6 @@
   services.fprintd.enable = true;
   systemd.network.wait-online.enable = false;
   services.flatpak.enable = true;
-  services.mullvad-vpn = {
-      enable = true;
-      package = pkgs.mullvad-vpn;
-  };
 
   environment.sessionVariables = {
       DOTNET_CLI_TELEMETRY_OPTOUT = "1";
