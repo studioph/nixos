@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -15,7 +16,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = [ "amdgpu.abmlevel=0" ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = ["sg"];
+  boot.kernelModules = [ "sg" ];
   networking.hostName = "studiop"; # Define your hostname.
   networking.hostId = "007f0200";
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -28,7 +29,7 @@
   networking.networkmanager.enable = true;
   networking.networkmanager.dns = "systemd-resolved";
   services.resolved.enable = true;
-  services.resolved.fallbackDns = [];
+  services.resolved.fallbackDns = [ ];
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -97,7 +98,7 @@
     isNormalUser = true;
     description = "Paul Hutchings";
     group = "paul";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" "scanner" "lp" "cdrom" "adbusers"];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "dialout" "scanner" "lp" "cdrom" "adbusers" ];
     autoSubUidGidRange = true;
   };
   users.users.root = {
@@ -137,11 +138,11 @@
     (
       pkgs.catppuccin-sddm.override {
         flavor = "frappe";
-        font  = "Noto Sans";
+        font = "Noto Sans";
         fontSize = "12";
         background = "${./catppuccin.jpg}";
         loginBackground = true;
-#         clockEnabled = true;
+        #         clockEnabled = true;
       }
     )
     smartmontools
@@ -160,7 +161,7 @@
     defaultNetwork.settings.dns_enabled = true;
   };
   virtualisation.libvirtd.enable = true;
-  virtualisation.libvirtd.onShutdown = "shutdown";  
+  virtualisation.libvirtd.onShutdown = "shutdown";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -176,9 +177,23 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPortRanges = [
-    { from = 8000; to = 9000; }
-  ];
+  networking.firewall = {
+    allowedTCPPortRanges = [
+      { from = 8000; to = 9000; }
+    ];
+
+    # if packets are still dropped, they will show up in dmesg
+    logReversePathDrops = true;
+    # wireguard trips rpfilter up
+    extraCommands = ''
+      ip46tables -t mangle -I nixos-fw-rpfilter -p udp -m udp --sport 58120 -j RETURN
+      ip46tables -t mangle -I nixos-fw-rpfilter -p udp -m udp --dport 58120 -j RETURN
+    '';
+    extraStopCommands = ''
+      ip46tables -t mangle -D nixos-fw-rpfilter -p udp -m udp --sport 58120 -j RETURN || true
+      ip46tables -t mangle -D nixos-fw-rpfilter -p udp -m udp --dport 58120 -j RETURN || true
+    '';
+  };
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
@@ -191,10 +206,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
-#   security.polkit.adminIdentities = [ ];
-#   boot.initrd.postDeviceCommands = lib.mkAfter ''
-#     zfs rollback -r rpool/local/root@blank
-#   '';
+  #   security.polkit.adminIdentities = [ ];
+  #   boot.initrd.postDeviceCommands = lib.mkAfter ''
+  #     zfs rollback -r rpool/local/root@blank
+  #   '';
 
   zramSwap.enable = true;
 
@@ -205,25 +220,25 @@
 
   nix = {
     package = pkgs.nixVersions.stable;
-#     nixPath = [
-#       "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-#       "nixos-config=${config.users.users.${username}.home}/.config/nixos/config.nix"
-#       "/nix/var/nix/profiles/per-user/root/channels"
-#     ];
+    #     nixPath = [
+    #       "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+    #       "nixos-config=${config.users.users.${username}.home}/.config/nixos/config.nix"
+    #       "/nix/var/nix/profiles/per-user/root/channels"
+    #     ];
     settings = {
-      allowed-users = ["@wheel"];
-      experimental-features = ["nix-command flakes"];
+      allowed-users = [ "@wheel" ];
+      experimental-features = [ "nix-command flakes" ];
       auto-optimise-store = true;
     };
   };
 
-#   fileSystems."/" = {
-#     device = "tmpfs";
-#     fsType = "tmpfs";
-#     # You must set mode=755. The default is 777, and OpenSSH will complain and disallow logins
-#     options = [ "relatime" "mode=755" ];
-#   };
-#
+  #   fileSystems."/" = {
+  #     device = "tmpfs";
+  #     fsType = "tmpfs";
+  #     # You must set mode=755. The default is 777, and OpenSSH will complain and disallow logins
+  #     options = [ "relatime" "mode=755" ];
+  #   };
+  #
 
   programs.dconf.enable = true;
 
@@ -237,7 +252,7 @@
   services.flatpak.enable = true;
 
   environment.sessionVariables = {
-      DOTNET_CLI_TELEMETRY_OPTOUT = "1";
+    DOTNET_CLI_TELEMETRY_OPTOUT = "1";
   };
 
   hardware.sane = {
@@ -245,7 +260,7 @@
     extraBackends = [ pkgs.epkowa ];
   };
 
-  security.pki.certificateFiles = [./universal-root.crt.pem];
+  security.pki.certificateFiles = [ ./universal-root.crt.pem ];
 
   services.udev.packages = [
     pkgs.android-udev-rules
