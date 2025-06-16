@@ -28,6 +28,7 @@
   networking.networkmanager.enable = true;
   networking.networkmanager.dns = "systemd-resolved";
   services.resolved.enable = true;
+  services.resolved.fallbackDns = [];
 
   # Set your time zone.
   time.timeZone = "America/New_York";
