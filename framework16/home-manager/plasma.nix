@@ -65,6 +65,7 @@
       "audio/x-vorbis+ogg" = "vlc.desktop";
       "audio/x-wav" = "vlc.desktop";
       "x-scheme-handler/mailto" = "thunderbird.desktop";
+      "text/calendar" = "thunderbird.desktop";
     };
   };
 }
