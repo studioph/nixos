@@ -182,6 +182,7 @@
   "files.simpleDialog.enable": true,
   "editor.fontFamily": "DejaVuSansM Nerd Font Mono",
   "terminal.integrated.fontFamily": "DejaVuSansM Nerd Font Mono",
+  "terminal.integrated.fontLigatures.enabled": true,
   "gitlens.telemetry.enabled": false,
   "dotnetAcquisitionExtension.enableTelemetry": false,
   "nix.enableLanguageServer": true, // Enable LSP.
