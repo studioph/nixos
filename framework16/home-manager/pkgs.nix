@@ -38,9 +38,12 @@
       kdePackages.xdg-desktop-portal-kde
       kid3
       kubectl
-      kubernetes-helm
-      kubernetes-helmPlugins.helm-diff
-      kubernetes-helmPlugins.helm-git
+      (wrapHelm kubernetes-helm {
+        plugins = with pkgs.kubernetes-helmPlugins; [
+          helm-diff
+          helm-git
+        ];
+      })
       libreoffice-qt
       libsForQt5.kamoso
       marktext
