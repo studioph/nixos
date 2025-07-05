@@ -46,7 +46,7 @@
       })
       libreoffice-qt
       libsForQt5.kamoso
-      marktext
+      logseq
       nerd-fonts.agave
       nerd-fonts.dejavu-sans-mono
       nerd-fonts.droid-sans-mono
