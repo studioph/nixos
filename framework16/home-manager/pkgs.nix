@@ -57,7 +57,7 @@
       nextcloud-client
       nil
       nixpkgs-fmt
-      nodejs_20
+      nodejs_22
       opentofu
       p7zip # TODO: Remove once Ark works without it
       papirus-icon-theme
