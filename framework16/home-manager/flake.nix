@@ -20,7 +20,7 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions/001f9f541edd406ff00aab49d968f535658778fa";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions/0cadf3b87cce52af29c3cc98be8ee81b3c05f2c1";
 
   };
 
