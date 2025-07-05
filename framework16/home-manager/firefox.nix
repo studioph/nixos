@@ -19,7 +19,7 @@
         tabliss
       ];
       search = {
-        default = "ddg";
+        default = "kagi";
         force = true;
       };
     };
