@@ -73,6 +73,7 @@
       talosctl
       tela-icon-theme
       ungoogled-chromium
+      unrar
       vimix-cursors
       virt-manager
       vlc
