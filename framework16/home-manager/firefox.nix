@@ -17,6 +17,7 @@
         plasma-integration
         skip-redirect
         tabliss
+        kagi-search
       ];
       search = {
         default = "kagi";
