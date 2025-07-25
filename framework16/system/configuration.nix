@@ -150,6 +150,7 @@
     kdePackages.ksystemlog
     kdePackages.kompare
     kdiff3
+    lsof
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
