@@ -269,4 +269,35 @@
 
   programs.nix-ld.enable = true;
   programs.ssh.startAgent = true;
+
+  systemd.mounts =
+    let
+      commonMountOptions = {
+        type = "cifs";
+        mountConfig = {
+          Options = "rw,noatime,uid=1000,gid=1000,cache=none,vers=3.0";
+        };
+      };
+    in
+    [
+      (commonMountOptions // {
+        what = "//qnap.studiop/downloads";
+        where = "/mnt/qnap";
+      })
+      (commonMountOptions // {
+        what = "//truenas.studiop/media";
+        where = "/mnt/truenas/media";
+      })
+    ];
+
+  systemd.automounts =
+    let
+      commonAutoMountOptions = {
+        wantedBy = [ "multi-user.target" ];
+      };
+    in
+    [
+      (commonAutoMountOptions // { where = "/mnt/truenas/media"; })
+      (commonAutoMountOptions // { where = "/mnt/qnap"; })
+    ];
 }
