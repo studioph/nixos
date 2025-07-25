@@ -290,15 +290,4 @@
         where = "/mnt/truenas/media";
       })
     ];
-
-  systemd.automounts =
-    let
-      commonAutoMountOptions = {
-        wantedBy = [ "multi-user.target" ];
-      };
-    in
-    [
-      (commonAutoMountOptions // { where = "/mnt/truenas/media"; })
-      (commonAutoMountOptions // { where = "/mnt/qnap"; })
-    ];
 }
