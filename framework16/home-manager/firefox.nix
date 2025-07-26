@@ -51,6 +51,25 @@
         };
       };
     };
+    policies = {
+      DontCheckDefaultBrowser = true;
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      DisablePocket = true;
+      DisableFirefoxScreenshots = true;
+      OverrideFirstRunPage = "";
+      PictureInPicture.Enabled = false;
+      UserMessaging =
+        {
+          UrlbarInterventions = false;
+          SkipOnboarding = true;
+        };
+      FirefoxSuggest =
+        {
+          WebSuggestions = false;
+          SponsoredSuggestions = false;
+          ImproveSuggest = false;
+        };
     };
   };
 
