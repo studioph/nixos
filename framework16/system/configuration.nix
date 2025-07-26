@@ -22,6 +22,8 @@
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
+      # Avoid waiting for password prompt
+      "plymouth.use-simpledrm"
     ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernelModules = [ "sg" ];
