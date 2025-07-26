@@ -12,11 +12,38 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "amdgpu.abmlevel=0" ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = [ "sg" ];
+  boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+    kernelParams = [
+      "amdgpu.abmlevel=0"
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
+    ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelModules = [ "sg" ];
+    # Enable "Silent boot"
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    initrd.systemd.enable = true;
+
+    # plymouth, showing after LUKS unlock
+    plymouth = {
+      enable = true;
+      theme = "spin";
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "circle" "circle_flow" "loader" "polaroid" "spin"];
+        })
+        plymouth-vortex-ubuntu-theme
+        kdePackages.breeze-plymouth
+      ];
+    };
+  };
   networking.hostName = "studiop"; # Define your hostname.
   networking.hostId = "007f0200";
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
