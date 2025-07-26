@@ -21,8 +21,36 @@
       ];
       search = {
         default = "kagi";
+        privateDefault = "kagi";
         force = true;
+        order = [ "kagi" "ddg" ];
+
+        engines = {
+          kagi = {
+            name = "Kagi";
+            urls = [
+                 {
+                   template = "https://kagi.com/search?";
+                   params = [
+                     {
+                       name = "q";
+                       value = "{searchTerms}";
+                     }
+                   ];
+                 }
+               ];
+            icon = "https://kagi.com/asset/45772d7/kagi_assets/logos/dark_2.svg";
+            definedAliases = ["@kagi"];
+          };
+
+          bing.metaData.hidden = true;
+          google.metaData.hidden = true;
+          "amazon.com".metaData.hidden = true;
+          amazondotcom-us.metaData.hidden = true;
+          ebay.metaData.hidden = true;
+        };
       };
+    };
     };
   };
 
