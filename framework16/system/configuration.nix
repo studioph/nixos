@@ -291,6 +291,8 @@
     extraBackends = [ pkgs.epkowa ];
   };
 
+  hardware.opentabletdriver.enable = true;
+
   security.pki.certificateFiles = [ ./universal-root.crt.pem ];
 
   services.udev.packages = [
