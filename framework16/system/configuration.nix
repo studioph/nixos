@@ -151,7 +151,7 @@
     zip
     unzip
     pigz
-    _7zz
+    p7zip
     usbutils
     pciutils
     nmap
@@ -180,6 +180,7 @@
     kdePackages.kompare
     kdiff3
     lsof
+    distrobox
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
