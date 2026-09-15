@@ -279,14 +279,21 @@
 
   fileSystems."/persist" = {
     neededForBoot = true;
+    depends = [
+      "/mnt/ssd"
+    ];
     device = "/mnt/ssd/persist";
-    fsType = "bind";
+    fsType = "none";
+    options = [ "bind" "noatime" ];
   };
 
   fileSystems."/nix" = {
+    depends = [
+      "/mnt/ssd"
+    ];
     device = "/mnt/ssd/nix";
-    fsType = "bind";
-    # neededForBoot = true;
+    fsType = "none";
+    options = [ "bind" "noatime" ];
   };
 
   programs.dconf.enable = true;
