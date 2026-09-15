@@ -279,12 +279,12 @@
   fileSystems."/persist" = {
     neededForBoot = true;
     device = "/mnt/ssd/persist";
-    # fsType = "ext4";
+    fsType = "bind";
   };
 
   fileSystems."/nix" = {
     device = "/mnt/ssd/nix";
-    # fsType = "bind";
+    fsType = "bind";
     # neededForBoot = true;
   };
 
