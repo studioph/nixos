@@ -5,9 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
     hardware.url = "github:nixos/nixos-hardware";
+
+    impermanence.url = "github:nix-community/impermanence";
   };
 
-  outputs = inputs@{ self, nixpkgs, hardware, ... }:
+  outputs = inputs@{ self, nixpkgs, hardware, impermanence, ... }:
     let
       username = "paul";
     in
@@ -17,6 +19,7 @@
         modules = [
           ./configuration.nix
           hardware.nixosModules.framework-16-7040-amd
+          impermanence.nixosModules.impermanence
         ];
       };
     };

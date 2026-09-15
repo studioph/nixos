@@ -264,13 +264,29 @@
     };
   };
 
-  #   fileSystems."/" = {
-  #     device = "tmpfs";
-  #     fsType = "tmpfs";
-  #     # You must set mode=755. The default is 777, and OpenSSH will complain and disallow logins
-  #     options = [ "relatime" "mode=755" ];
-  #   };
-  #
+  fileSystems."/" = {
+    device = "none";
+    fsType = "tmpfs";
+    options = [ "defaults" "size=25%" "mode=755" ];
+  };
+
+  fileSystems."/mnt/ssd" = {
+    device = "/dev/disk/by-uuid/07e7c70c-0113-4028-80b9-32b4d7a3dcf4";
+    fsType = "ext4";
+    neededForBoot = true;
+  };
+
+  fileSystems."/persist" = {
+    neededForBoot = true;
+    device = "/mnt/ssd/persist";
+    # fsType = "ext4";
+  };
+
+  fileSystems."/nix" = {
+    device = "/mnt/ssd/nix";
+    # fsType = "bind";
+    # neededForBoot = true;
+  };
 
   programs.dconf.enable = true;
 
@@ -322,4 +338,19 @@
         where = "/mnt/truenas/media";
       })
     ];
+
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      "/var/log"
+      "/var/lib/bluetooth"
+      "/var/lib/nixos"
+      "/var/lib/systemd/coredump"
+      "/etc/NetworkManager/system-connections"
+      "/var/lib/flatpak"
+    ];
+    files = [
+      "/etc/machine-id"
+    ];
+  };
 }

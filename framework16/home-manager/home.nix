@@ -7,6 +7,7 @@
     ./firefox.nix
     ./terminal.nix
     ./dev.nix
+    ./persist.nix
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
