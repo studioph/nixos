@@ -43,12 +43,12 @@
 
   programs.ssh = {
     enable = true;
-    matchBlocks = {
+    enableDefaultConfig = false;
+    settings = {
       "coreos" = {
         hostname = "coreos.studiop";
         user = "core";
         identityFile = "~/.ssh/coreos";
-        extraOptions = { StrictHostKeyChecking = "no"; };
       };
       "truenas" = {
         hostname = "truenas.studiop";
@@ -65,8 +65,21 @@
         user = "admin";
         identityFile = "~/.ssh/opn";
       };
+
+      "*" = {
+        ForwardAgent = false;
+        AddKeysToAgent = "no";
+        Compression = false;
+        ServerAliveInterval = 0;
+        ServerAliveCountMax = 3;
+        HashKnownHosts = false;
+        UserKnownHostsFile = "~/.ssh/known_hosts";
+        ControlMaster = "no";
+        ControlPath = "~/.ssh/master-%r@%n:%p";
+        ControlPersist = "no";
+      };
     };
-    includes = [ "devpod.sshconfig"];
+    includes = [ "devpod.sshconfig" ];
   };
 
   programs.thunderbird = {

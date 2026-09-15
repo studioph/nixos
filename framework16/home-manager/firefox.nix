@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.firefox = {
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     enable = true;
     #nativeMessagingHosts.packages = [ pkgs.plasma-browser-integration ];
     profiles.studiop = {

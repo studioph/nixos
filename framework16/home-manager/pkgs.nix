@@ -3,7 +3,7 @@
   home = {
     packages = (with pkgs; [
       android-tools
-      bitwarden
+      bitwarden-desktop
       dbgate
       devpod
       dino
@@ -45,8 +45,7 @@
         ];
       })
       libreoffice-qt
-      libsForQt5.kamoso
-      logseq
+      kdePackages.kamoso
       nerd-fonts.agave
       nerd-fonts.dejavu-sans-mono
       nerd-fonts.droid-sans-mono
