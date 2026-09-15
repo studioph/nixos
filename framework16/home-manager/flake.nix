@@ -22,10 +22,9 @@
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions/3e3e226511ba4b7758910df58336dfd2ca520dc5";
 
-    impermanence.url = "github:nix-community/impermanence";
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nurpkgs, plasma-manager, nix-flatpak, nix-vscode-extensions, impermanence, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nurpkgs, plasma-manager, nix-flatpak, nix-vscode-extensions, ... }:
     let
       pkgs = import nixpkgs {
         system = "x86_64-linux";
@@ -48,10 +47,9 @@
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./home.nix
             plasma-manager.homeManagerModules.plasma-manager
             nix-flatpak.homeManagerModules.nix-flatpak
-            impermanence.nixosModules.impermanence
+            ./home.nix
           ];
           extraSpecialArgs = { inherit inputs username extensions unstable; };
         };

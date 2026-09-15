@@ -9,6 +9,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./persist.nix
     ];
 
   # Bootloader.
@@ -334,19 +335,4 @@
         where = "/mnt/truenas/media";
       })
     ];
-
-  environment.persistence."/persist" = {
-    hideMounts = true;
-    directories = [
-      "/var/log"
-      "/var/lib/bluetooth"
-      "/var/lib/nixos"
-      "/var/lib/systemd/coredump"
-      "/etc/NetworkManager/system-connections"
-      "/var/lib/flatpak"
-    ];
-    files = [
-      "/etc/machine-id"
-    ];
-  };
 }
