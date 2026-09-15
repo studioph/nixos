@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
-  home = {
-    persistence."/persist" = {
+  home.persistence."/persist" = {
       hideMounts = true;
       directories = [
         "Downloads"
@@ -28,5 +27,4 @@
         ".config/helm/repositories.yaml"
       ];
     };
-  };
 }
