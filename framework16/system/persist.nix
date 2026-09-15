@@ -14,7 +14,6 @@
       "/etc/machine-id"
     ];
     users.paul = {
-      hideMounts = true;
       directories = [
         "Downloads"
         "Music"
