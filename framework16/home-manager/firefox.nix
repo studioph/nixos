@@ -76,6 +76,6 @@
 
   home.file."firefox overrides" = {
     source = ./configs/firefox-overrides.js;
-    target = ".mozilla/firefox/studiop/user-overrides.js";
+    target = ".config/mozilla/firefox/studiop/user-overrides.js";
   };
 }

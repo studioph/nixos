@@ -1,4 +1,4 @@
-{ pkgs, extensions, unstable, ... }:
+{ pkgs, extensions, ... }:
 
 let
   compatibleExtensions = extensions.forVSCodeVersion (pkgs.vscodium.vscodeVersion);
