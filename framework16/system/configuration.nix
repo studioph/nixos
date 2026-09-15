@@ -9,7 +9,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./persist.nix
+      # ./persist.nix
     ];
 
   # Bootloader.
@@ -46,6 +46,8 @@
         kdePackages.breeze-plymouth
       ];
     };
+
+    tmp.cleanOnBoot = true;
   };
   networking.hostName = "studiop"; # Define your hostname.
   networking.hostId = "007f0200";
@@ -265,36 +267,36 @@
     };
   };
 
-  fileSystems."/" = {
-    device = "none";
-    fsType = "tmpfs";
-    options = [ "defaults" "size=25%" "mode=755" ];
-  };
+  # fileSystems."/" = {
+  #   device = "none";
+  #   fsType = "tmpfs";
+  #   options = [ "defaults" "size=25%" "mode=755" ];
+  # };
 
-  fileSystems."/mnt/ssd" = {
-    device = "/dev/disk/by-uuid/07e7c70c-0113-4028-80b9-32b4d7a3dcf4";
-    fsType = "ext4";
-    neededForBoot = true;
-  };
+  # fileSystems."/mnt/ssd" = {
+  #   device = "/dev/disk/by-uuid/07e7c70c-0113-4028-80b9-32b4d7a3dcf4";
+  #   fsType = "ext4";
+  #   neededForBoot = true;
+  # };
 
-  fileSystems."/persist" = {
-    neededForBoot = true;
-    depends = [
-      "/mnt/ssd"
-    ];
-    device = "/mnt/ssd/persist";
-    fsType = "none";
-    options = [ "bind" "noatime" ];
-  };
+  # fileSystems."/persist" = {
+  #   neededForBoot = true;
+  #   depends = [
+  #     "/mnt/ssd"
+  #   ];
+  #   device = "/mnt/ssd/persist";
+  #   fsType = "none";
+  #   options = [ "bind" "noatime" ];
+  # };
 
-  fileSystems."/nix" = {
-    depends = [
-      "/mnt/ssd"
-    ];
-    device = "/mnt/ssd/nix";
-    fsType = "none";
-    options = [ "bind" "noatime" ];
-  };
+  # fileSystems."/nix" = {
+  #   depends = [
+  #     "/mnt/ssd"
+  #   ];
+  #   device = "/mnt/ssd/nix";
+  #   fsType = "none";
+  #   options = [ "bind" "noatime" ];
+  # };
 
   programs.dconf.enable = true;
 
@@ -343,11 +345,11 @@
       })
     ];
 
-  environment.etc = {
-    "group".source = "/persist/etc/group";
-    "passwd".source = "/persist/etc/passwd";
-    "shadow".source = "/persist/etc/shadow";
-  };
+  # environment.etc = {
+  #   "group".source = "/persist/etc/group";
+  #   "passwd".source = "/persist/etc/passwd";
+  #   "shadow".source = "/persist/etc/shadow";
+  # };
 }
 
 
