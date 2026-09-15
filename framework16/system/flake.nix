@@ -7,6 +7,12 @@
     hardware.url = "github:nixos/nixos-hardware";
 
     impermanence.url = "github:nix-community/impermanence";
+
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+   };
+   pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
   };
 
   outputs = inputs@{ self, nixpkgs, hardware, impermanence, ... }:

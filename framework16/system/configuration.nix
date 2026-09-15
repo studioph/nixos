@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ lib, config, pkgs, username, ... }:
+{ inputs, lib, config, pkgs, username, ... }:
 
 {
   imports =
@@ -10,7 +10,14 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # ./persist.nix
+      inputs.silentSDDM.nixosModules.default
+
     ];
+  programs.silentSDDM = {
+    enable = true;
+    theme = "default";
+    # settings = { ... }; see example in module
+  };
 
   # Bootloader.
   boot = {
@@ -85,7 +92,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "catppuccin-frappe";
+    # theme = "catppuccin-frappe";
   };
   services.desktopManager.plasma6.enable = true;
   services.displayManager.defaultSession = "plasma";
