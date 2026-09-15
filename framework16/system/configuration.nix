@@ -312,10 +312,6 @@
 
   security.pki.certificateFiles = [ ./universal-root.crt.pem ];
 
-  services.udev.packages = [
-    pkgs.android-udev-rules
-  ];
-
   programs.nix-ld.enable = true;
   programs.ssh.startAgent = true;
 
