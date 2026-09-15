@@ -14,8 +14,6 @@
       "/etc/machine-id"
       "/etc/passwd"
       "/etc/shadow"
-      "/etc/setuid"
-      "/etc/setgid"
       "/etc/group"
     ];
     users.paul = {

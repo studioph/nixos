@@ -40,7 +40,7 @@
       themePackages = with pkgs; [
         # By default we would install all themes
         (adi1090x-plymouth-themes.override {
-          selected_themes = [ "circle" "circle_flow" "loader" "polaroid" "spin"];
+          selected_themes = [ "circle" "circle_flow" "loader" "polaroid" "spin" ];
         })
         plymouth-vortex-ubuntu-theme
         kdePackages.breeze-plymouth
@@ -342,4 +342,12 @@
         where = "/mnt/truenas/media";
       })
     ];
+
+  environment.etc = {
+    "group".source = "/persist/etc/group";
+    "passwd".source = "/persist/etc/passwd";
+    "shadow".source = "/persist/etc/shadow";
+  };
 }
+
+
