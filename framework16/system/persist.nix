@@ -12,6 +12,11 @@
     ];
     files = [
       "/etc/machine-id"
+      "/etc/passwd"
+      "/etc/shadow"
+      "/etc/setuid"
+      "/etc/setgid"
+      "/etc/group"
     ];
     users.paul = {
       directories = [
@@ -24,7 +29,7 @@
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
         ".MakeMKV"
-        ".mozilla"
+        ".config/mozilla"
         ".nuget"
         ".thunderbird"
         ".vscode-oss"
