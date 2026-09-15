@@ -91,7 +91,7 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true;
+    wayland.enable = lib.mkForce true;
     # theme = "catppuccin-frappe";
   };
   services.desktopManager.plasma6.enable = true;
