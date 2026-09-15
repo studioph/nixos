@@ -22,12 +22,12 @@
       kdePackages.filelight
       kdePackages.isoimagewriter
       kdePackages.k3b
+      kdePackages.kamoso
       kdePackages.kate
       kdePackages.kcalc
       kdePackages.kdeconnect-kde
       kdePackages.kdenlive
       kdePackages.kdepim-runtime
-      kdePackages.kolourpaint
       kdePackages.krdc
       kdePackages.ksshaskpass
       kdePackages.kweather
@@ -37,15 +37,10 @@
       kdePackages.skanpage
       kdePackages.xdg-desktop-portal-kde
       kid3
+      krita
       kubectl
-      (wrapHelm kubernetes-helm {
-        plugins = with pkgs.kubernetes-helmPlugins; [
-          helm-diff
-          helm-git
-        ];
-      })
       libreoffice-qt
-      kdePackages.kamoso
+      makemkv
       nerd-fonts.agave
       nerd-fonts.dejavu-sans-mono
       nerd-fonts.droid-sans-mono
@@ -56,7 +51,7 @@
       nextcloud-client
       nil
       nixpkgs-fmt
-      nodejs_22
+      nodejs_24
       opentofu
       p7zip # TODO: Remove once Ark works without it
       papirus-icon-theme
@@ -68,6 +63,7 @@
       pyenv
       python3
       rclone
+      rendercv
       rustup
       talosctl
       tela-icon-theme
@@ -79,6 +75,12 @@
       webcord
       xdg-desktop-portal
       xournalpp
+      (wrapHelm kubernetes-helm {
+        plugins = with pkgs.kubernetes-helmPlugins; [
+          helm-diff
+          helm-git
+        ];
+      })
     ]);
   };
 
