@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 {
   home = {
     packages = (with pkgs; [
@@ -56,6 +56,7 @@
       p7zip # TODO: Remove once Ark works without it
       papirus-icon-theme
       pdm
+      unstable.pipx
       podman-compose
       podman-tui
       protonmail-bridge
@@ -63,7 +64,7 @@
       pyenv
       python3
       rclone
-      rendercv
+      # rendercv TODO when nested bullets fixed upstream
       rustup
       talosctl
       tela-icon-theme
