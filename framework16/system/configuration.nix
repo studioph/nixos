@@ -334,21 +334,20 @@
 
   systemd.mounts =
     let
-      commonMountOptions = {
-        type = "cifs";
-        mountConfig = {
-          Options = "rw,noatime,uid=1000,gid=1000,cache=none,vers=3.0";
-        };
-      };
+      commonMountOptions = "rw,noatime,uid=1000,gid=1000,cache=none,vers=3.0,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,user,users";
     in
     [
-      (commonMountOptions // {
+      ({
+        type = "cifs";
         what = "//qnap.studiop/downloads";
-        where = "/mnt/qnap";
+        where = "/mnt/downloads";
+        options = "${commonMountOptions},credentials=/mnt/qnap.conf";
       })
-      (commonMountOptions // {
+      ({
+        type = "cifs";
         what = "//truenas.studiop/media";
-        where = "/mnt/truenas/media";
+        where = "/mnt/media";
+        options = "${commonMountOptions},credentials=/mnt/truenas.conf";
       })
     ];
 
