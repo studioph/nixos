@@ -73,7 +73,7 @@
       vimix-cursors
       virt-manager
       vlc
-      webcord
+      unstable.webcord
       xdg-desktop-portal
       xournalpp
       (wrapHelm kubernetes-helm {

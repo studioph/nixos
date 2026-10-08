@@ -20,7 +20,7 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions/3e3e226511ba4b7758910df58336dfd2ca520dc5";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions/b8a3b671a4c4b5061baf25642a4196797b6e931b";
 
   };
 
@@ -47,7 +47,7 @@
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            plasma-manager.homeManagerModules.plasma-manager
+            plasma-manager.homeModules.plasma-manager
             nix-flatpak.homeManagerModules.nix-flatpak
             ./home.nix
           ];

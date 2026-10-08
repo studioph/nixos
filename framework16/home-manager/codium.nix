@@ -1,7 +1,7 @@
-{ pkgs, extensions, ... }:
+{ pkgs, unstable, extensions, ... }:
 
 let
-  compatibleExtensions = extensions.forVSCodeVersion (pkgs.vscodium.vscodeVersion);
+  compatibleExtensions = extensions.forVSCodeVersion (unstable.vscodium.vscodeVersion);
 
 in
 {
@@ -39,6 +39,7 @@ in
       tyriar.sort-lines
       yzhang.markdown-all-in-one
       jeanp413.open-remote-ssh
+      s-h-a-d-o-w.dev-containers-oss
     ])
     ++ (with compatibleExtensions; [
       # Specify separately otherwise the quoting doesn't work properly

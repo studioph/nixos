@@ -14,11 +14,11 @@
         facebook-container
         floccus
         multi-account-containers
-        old-reddit-redirect
         plasma-integration
         skip-redirect
-        tabliss
+        tablissng
         kagi-search
+        libredirect
       ];
       search = {
         default = "kagi";
@@ -49,6 +49,7 @@
           "amazon.com".metaData.hidden = true;
           amazondotcom-us.metaData.hidden = true;
           ebay.metaData.hidden = true;
+          perplexity.metaData.hidden = true;
         };
       };
     };
