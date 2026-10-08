@@ -67,8 +67,8 @@
       };
 
       "*" = {
-        ForwardAgent = false;
-        AddKeysToAgent = "no";
+        ForwardAgent = true;
+        AddKeysToAgent = "true";
         Compression = false;
         ServerAliveInterval = 0;
         ServerAliveCountMax = 3;
