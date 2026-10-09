@@ -65,7 +65,7 @@
   "explorer.autoReveal": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "off",
   "files.associations": {
     "*.unit": "systemd-unit-file",
     "talosconfig": "yaml"
