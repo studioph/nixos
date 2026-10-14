@@ -153,44 +153,33 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wireguard-tools
-    curl
-    dnsutils
-    rsync
-    yq-go
-    zip
-    unzip
-    pigz
-    p7zip
-    usbutils
-    pciutils
-    nmap
-    kdePackages.plasma-thunderbolt
-    thunderbolt
-    cifs-utils
-    nfs-utils
-    virtiofsd
-    openssl
     amdgpu_top
-    usbutils
-    kdePackages.sddm-kcm
-    (
-      pkgs.catppuccin-sddm.override {
-        flavor = "frappe";
-        font = "Noto Sans";
-        fontSize = "12";
-        background = "${./catppuccin.jpg}";
-        loginBackground = true;
-        #         clockEnabled = true;
-      }
-    )
-    smartmontools
-    kdePackages.print-manager
-    kdePackages.ksystemlog
+    cifs-utils
+    curl
+    distrobox
+    dnsutils
     kdePackages.kompare
+    kdePackages.ksystemlog
+    kdePackages.plasma-thunderbolt
+    kdePackages.print-manager
+    kdePackages.sddm-kcm
     kdiff3
     lsof
-    distrobox
+    nfs-utils
+    nmap
+    openssl
+    p7zip
+    pciutils
+    pigz
+    rsync
+    smartmontools
+    thunderbolt
+    unzip
+    usbutils
+    virtiofsd
+    wireguard-tools
+    yq-go
+    zip
   ];
   services.hardware.bolt.enable = true;
   #programs.kdeconnect.enable = true;
