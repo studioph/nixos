@@ -65,6 +65,7 @@
       python3
       rclone
       # rendercv TODO when nested bullets fixed upstream
+      renovate
       rustup
       talosctl
       tela-icon-theme
